@@ -5,8 +5,8 @@ import gestion.Zona;
 
 public class Reptil extends Animal{
 	private static ArrayList<Reptil> listado;
-	public int iguanas;
-	public int serpientes;
+	public static int iguanas;
+	public static int serpientes;
 	private String colorEscamas;
 	private int largoCola;
 	public static ArrayList<Reptil> getListado() {
@@ -33,21 +33,26 @@ public class Reptil extends Animal{
 	public String movimiento() {
 		return "reptar";
 	}
-	public void crearIguana(String nombre, int edad, String genero) {
-		Reptil(nombre, edad, "humedal",genero,,"verde",3);
+	public static Animal crearIguana(String nombre, int edad, String genero) {
+		Reptil a = new Reptil(nombre, edad, "humedal",genero,"verde",3);
+		iguanas++;
+		return a;
 	}
-	public void crearSerpiente(String nombre, int edad, String genero) {
-		Reptil(nombre, edad, "jungla",genero,,"blanco",1);
+	public static Animal crearSerpiente(String nombre, int edad, String genero) {
+		Reptil a = new Reptil(nombre, edad, "jungla",genero,"blanco",1);
+		serpientes++;
+		return a;
 	}
-	Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas,
+	Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas,
 			int largoCola){
-		super(nombre, edad, habitat, genero, zona);
+		super(nombre, edad, habitat, genero);
 		this.setColorEscamas(colorEscamas);
 		this.setLargoCola(largoCola);
 		
 		listado.add(this);
 	}
 	Reptil(){
+		listado.add(this);
 		setTotalAnimales(getTotalAnimales()+1);
 	}
 }
