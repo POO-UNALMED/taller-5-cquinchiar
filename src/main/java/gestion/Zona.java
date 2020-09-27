@@ -27,7 +27,7 @@ public class Zona {
 		animales.add(animal);
 	}
 	public int cantidadAnimales() {
-		return animales.size();
+		return this.animales.size();
 	}
 	public Zona(String nombre, Zoologico zoo){
 		this.setNombre(nombre);
