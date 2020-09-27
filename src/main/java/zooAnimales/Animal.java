@@ -65,14 +65,14 @@ public class Animal {
 					", habito en "+this.getHabitat()+" y mi genero es"+this.getGenero();
 		}
 	}
-	Animal(String nombre, int edad, String habitat, String genero){
+	public Animal(String nombre, int edad, String habitat, String genero){
 		setTotalAnimales(getTotalAnimales()+1);
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 	}
-	Animal(){
+	public Animal(){
 		setTotalAnimales(getTotalAnimales()+1);
 	}
 }

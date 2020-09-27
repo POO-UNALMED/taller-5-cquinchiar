@@ -43,7 +43,7 @@ public class Reptil extends Animal{
 		serpientes++;
 		return a;
 	}
-	Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas,
+	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas,
 			int largoCola){
 		super(nombre, edad, habitat, genero);
 		this.setColorEscamas(colorEscamas);
@@ -51,7 +51,7 @@ public class Reptil extends Animal{
 		
 		listado.add(this);
 	}
-	Reptil(){
+	public Reptil(){
 		listado.add(this);
 		setTotalAnimales(getTotalAnimales()+1);
 	}

@@ -35,12 +35,12 @@ public class Zoologico {
 		}
 		return con;
 	}
-	Zoologico(String nombre, String ubicacion, ArrayList<Zona> zonas){
+	public Zoologico(String nombre, String ubicacion, ArrayList<Zona> zonas){
 		this.setNombre(nombre);
 		this.setUbicacion(ubicacion);
 		this.setZonas(zonas);
 	}
-	Zoologico(){
+	public Zoologico(){
 		
 	}
 	

@@ -43,7 +43,7 @@ public class Pez extends Animal{
 		bacalaos++;
 		return a;
 	}
-	Pez(String nombre, int edad, String habitat, String genero, String colorEscamas,
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas,
 			int cantidadAletas){
 		super(nombre, edad, habitat, genero);
 		this.setColorEscamas(colorEscamas);
@@ -51,7 +51,7 @@ public class Pez extends Animal{
 		
 		listado.add(this);
 	}
-	Pez(){
+	public Pez(){
 		listado.add(this);
 		setTotalAnimales(getTotalAnimales()+1);
 	}

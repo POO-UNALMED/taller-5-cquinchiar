@@ -29,12 +29,12 @@ public class Zona {
 	public int cantidadAnimales() {
 		return animales.size();
 	}
-	Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales){
+	public Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales){
 		this.setNombre(nombre);
 		this.setAnimales(animales);
 		this.setZoo(zoo);
 	}
-	Zona(){
+	public Zona(){
 		
 	}
 }
